@@ -46,6 +46,21 @@ div.center {
 div.imageText {
   text-shadow:0px 0px 5px rgba(0,0,0,0.2);
 }
+
+.bg-center {
+  background-position:center center;
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+
+html {
+  height:100%;
+}
+
+.bg-center div {
+  height:100%;
+}
+
 </style><script type='text/javascript'>
 window.onload = function() {
     var s = document.getElementsByTagName('div'), cur = 0, ti;
@@ -113,16 +128,16 @@ window.onload = function() {
 <div>We can quickly and easily see the impact of current events.</div>
 <div><img src="images/yesallwomentwitter.png"/></div>
 <div>..or use them to help get to that jazz gig quickly in Metro Atlanta that you're late for.</div>
-<div><img src="images/nav.png"/></div>
+<div data-bodyclass='bg-center'><img src="images/nav.png"/></div>
 <div>Maybe you already know about all of this stuff.</div>
 <div>Or not.</div>
 <div>Either way, you should be excited! If you're not I want to get you excited!</div>
 <div>OK</div>
 <div>So let's get started with some very very brief history.</div>
-<div>Waaay back in 1993 the folks at Xerox PARC made a way to render maps as images.</div>
+<div>Waaay back in 1993 the folks at Xerox PARC made a way to render maps as images on the web. You could see basic features like roads</div>
 <div>A few years later MapQuest created a way for address matching and routes.</div>
 <div>Several years later, in 2004, OpenStreetMap, an effort to produce freely licensed street maps started.</div>
-<div>Then a year later, Google brings us Google maps, which arguably, started an explosion of interest in web maps.</div>
+<div>Then a year later, Google brings us Google Maps, which arguably, started an explosion of interest in web maps. They brought us the 'slippy map.'</div>
 <div>I know I skipped a ton of stuff from 1996-2004, but I tried to hit the really big major points. We can talk about it later if you want. It's interesting.</div>
 <div>Anyway, so where are we now?</div>
 <div>JavaScript, Leaflet, Google Maps, GeoJSON, TopoJSON, ArcJSON, Shapefiles, OpenStreetMap, Geolocation, Proj4J, GDAL, CartoDB, GeoCouch, Terraformer, CartoCSS, Mapbox, QGIS, ArcGIS, GeoServer, D3, SVG, HTML5, geocoding, projections, PostGIS, map tiles, slippy maps, choropleths, voronoi diagrams</div>
@@ -130,3 +145,20 @@ window.onload = function() {
 <div>Like, what if I just had a bunch of addresses, and I wanted to put them on a map, what's the absolute easiest way to do that?</div>
 <div>One really nice online service is CartoDB. It makes all of this really easy.</div>
 <div>All you literally have to do is upload some data with some kind of geographic info like addresses or zip codes.</div>
+<div>First let's upload a dataset. I have a dataset with all of the schools in the state of Tennessee and their addresses.</div>
+<div>OK, now that we have this uploaded, we need to make it useful geographically.</div>
+<div>We need to geocode each record in the data.</div>
+<div>Geocoding is where we take a physical address and convert it into a point on a map, represented by longitude and latitude.</div>
+<div>[35.062039,-85.339158]</div>
+<div>35.062039 is latitude (North to South)</div>
+<div>-85.339158 is longitude (East to West)</div>
+<div>The longitudinal center is called the prime meridian. Prime meridians are actually arbitrary, but the one people use for most things is called the Prime meridian at Greenwich.</div>
+<div data-bodyclass='bg-center'><img src="images/greenwich.jpg"/></div>
+<div>The latitudinal center is the equator.</div>
+<div data-bodyclass='bg-center'><img src="images/ecuador.jpg"/></div>
+<div>OK. So CartoDB as a way to geocode addresses and zipcodes. Let's do that.</div>
+<div>So now we have these geocoded records. Let's plot them!</div>
+<div>Let's visualize it!</div>
+<div>Ok, so that was cool. What about this open data stuff?</div>
+<div>http://data.chattlibrary.org</div>
+<div>So the data portal has some pretty nice map visualization capabilities. Let's play with that.</div>
